@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographer Praveen Singh Bisht | Online Photography Service Nainital</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pine: {
+                            950: '#06120c',
+                            900: '#091a12',
+                            850: '#0d261a',
+                            800: '#0f2a1d',
+                            700: '#143827',
+                            600: '#1d4d37',
+                        },
+                        emeraldCustom: {
+                            500: '#2e7d32',
+                            400: '#4caf50',
+                            300: '#81c784',
+                            200: '#a5d6a7'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: rgba(9, 26, 18, 0.94);
+            backdrop-filter: blur(16px);
+        }
+        .green-gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a5d6a7 50%, #4caf50 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(9, 26, 18, 0.82), rgba(9, 26, 18, 0.96)), 
+                        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat fixed;
+        }
+        .scenic-bg {
+            background: linear-gradient(to bottom, rgba(13, 38, 26, 0.88), rgba(9, 26, 18, 0.96)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat fixed;
+        }
+    </style>
+</head>
+<body class="bg-pine-900 text-stone-100 font-sans antialiased selection:bg-emeraldCustom-400 selection:text-pine-950">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-pine-700/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Title -->
+                <a href="#" class="flex flex-col">
+                    <span class="font-serif text-xl sm:text-2xl tracking-wide font-bold text-white uppercase">Praveen Singh Bisht</span>
+                    <span class="text-[10px] sm:text-xs tracking-widest text-emeraldCustom-300 font-medium uppercase">Online Photography Service • Mallital, Nainital</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex space-x-6 text-xs uppercase font-medium tracking-widest text-stone-200">
+                    <a href="#about" class="hover:text-emeraldCustom-300 transition-colors">How It Works</a>
+                    <a href="#events" class="hover:text-emeraldCustom-300 transition-colors">Get-Together Events</a>
+                    <a href="#sceneries" class="hover:text-emeraldCustom-300 transition-colors">Scenic Photography</a>
+                    <a href="#policy" class="hover:text-emeraldCustom-300 transition-colors">Booking &amp; Policies</a>
+                    <a href="#contact" class="hover:text-emeraldCustom-300 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action CTA Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/919411309153?text=Hello%20Praveen,%20I%20would%20like%20to%20inquire%20about%20booking%20your%20photography%20service." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-full text-xs tracking-wider uppercase transition-all shadow-lg hover:shadow-emerald-500/30">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                    </a>
+                    <a href="mailto:psbishtntl0@gmail.com" class="inline-flex items-center gap-1.5 bg-pine-800 hover:bg-pine-700 text-emeraldCustom-300 border border-pine-600 font-bold px-4 py-2 rounded-full text-xs tracking-wider uppercase transition-all">
+                        <i class="fa-solid fa-envelope text-xs"></i> Email
+                    </a>
+                    <a href="tel:+919411309153" class="inline-flex items-center gap-1.5 bg-emeraldCustom-400 hover:bg-emeraldCustom-300 text-pine-950 font-bold px-4 py-2 rounded-full text-xs tracking-wider uppercase transition-all shadow-lg hover:shadow-emeraldCustom-400/30">
+                        <i class="fa-solid fa-phone text-xs"></i> 094113 09153
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" type="button" class="text-stone-200 hover:text-emeraldCustom-300 focus:outline-none p-2" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-pine-700 bg-pine-850 px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-white font-medium hover:text-emeraldCustom-300">How It Works</a>
+            <a href="#events" onclick="toggleMobileMenu()" class="block py-2 text-white font-medium hover:text-emeraldCustom-300">Get-Together Events</a>
+            <a href="#sceneries" onclick="toggleMobileMenu()" class="block py-2 text-white font-medium hover:text-emeraldCustom-300">Scenic Photography</a>
+            <a href="#policy" onclick="toggleMobileMenu()" class="block py-2 text-white font-medium hover:text-emeraldCustom-300">Booking &amp; Policies</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-white font-medium hover:text-emeraldCustom-300">Contact &amp; Links</a>
+            <div class="pt-2 grid grid-cols-2 gap-2">
+                <a href="https://wa.me/919411309153?text=Hello%20Praveen,%20I%20would%20like%20to%20inquire%20about%20booking%20your%20photography%20service." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 bg-emerald-600 text-white py-2.5 rounded-lg text-xs font-bold tracking-wider uppercase">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
+                </a>
+                <a href="tel:+919411309153" class="inline-flex items-center justify-center gap-1.5 bg-emeraldCustom-400 text-pine-950 py-2.5 rounded-lg text-xs font-bold tracking-wider uppercase">
+                    <i class="fa-solid fa-phone text-xs"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[92vh] flex items-center justify-center pt-20 hero-bg text-white overflow-hidden border-b border-pine-700/50">
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-emeraldCustom-300 uppercase bg-pine-850/90 backdrop-blur-md rounded-full border border-emeraldCustom-400/40 shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-emeraldCustom-300 animate-pulse"></span>
+                Online Service • Hire From Any Location For Nainital &amp; Uttarakhand
+            </div>
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight text-white">
+                Hire Online For Your <br class="hidden sm:inline"/><span class="green-gradient-text">Events &amp; Scenic Moments</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-base sm:text-lg text-stone-200 font-light mb-10 leading-relaxed">
+                Visiting Nainital or planning a local event? Hire Praveen online from anywhere before or during your trip. Receive high-resolution digital photos directly to print later on your own, or consult Praveen directly for custom photo prints, frames, albums, and magazines.
+            </p>
+
+            <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+                <a href="https://wa.me/919411309153?text=Hello%20Praveen,%20I%20would%20like%20to%20inquire%20about%20booking%20your%20photography%20service." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs tracking-widest uppercase rounded-lg transition-all shadow-lg hover:shadow-emerald-500/30">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Book via WhatsApp
+                </a>
+                <a href="mailto:psbishtntl0@gmail.com" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-pine-800/90 hover:bg-pine-700 text-white font-medium text-xs tracking-widest uppercase rounded-lg border border-pine-600 transition-all">
+                    <i class="fa-solid fa-envelope"></i> Email Praveen
+                </a>
+                <a href="tel:+919411309153" class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-emeraldCustom-400 hover:bg-emeraldCustom-300 text-pine-950 font-bold text-xs tracking-widest uppercase rounded-lg transition-all shadow-lg hover:shadow-emeraldCustom-400/30">
+                    <i class="fa-solid fa-phone"></i> Call 094113 09153
+                </a>
+            </div>
+
+            <!-- Social Maps Quick Badge Links -->
+            <div class="mt-10 pt-8 border-t border-pine-700/50 flex flex-wrap justify-center items-center gap-4 text-xs font-medium text-stone-300">
+                <a href="https://maps.app.goo.gl/GtCsUzVaXRoio7ud8?g_st=ic" target="_blank" rel="noopener noreferrer" class="hover:text-emeraldCustom-300 inline-flex items-center gap-1.5 bg-pine-950/80 px-3 py-1.5 rounded-full border border-pine-700">
+                    <i class="fa-solid fa-store text-emeraldCustom-400"></i> Google Profile Link
+                </a>
+                <a href="https://maps.google.com/maps?cid=764996179769750051" target="_blank" rel="noopener noreferrer" class="hover:text-emeraldCustom-300 inline-flex items-center gap-1.5 bg-pine-950/80 px-3 py-1.5 rounded-full border border-pine-700">
+                    <i class="fa-solid fa-map-location-dot text-emeraldCustom-400"></i> Google Maps
+                </a>
+                <a href="https://maps.apple.com/?q=Photographer+Praveen+Singh+Bisht+Nainital" target="_blank" rel="noopener noreferrer" class="hover:text-emeraldCustom-300 inline-flex items-center gap-1.5 bg-pine-950/80 px-3 py-1.5 rounded-full border border-pine-700">
+                    <i class="fa-brands fa-apple text-emeraldCustom-400"></i> Apple Maps
+                </a>
+                <a href="https://www.instagram.com/explore/search/keyword/?q=Photographer%20Praveen%20Singh%20Bisht" target="_blank" rel="noopener noreferrer" class="hover:text-emeraldCustom-300 inline-flex items-center gap-1.5 bg-pine-950/80 px-3 py-1.5 rounded-full border border-pine-700">
+                    <i class="fa-brands fa-instagram text-emeraldCustom-400"></i> Instagram Profile Search
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Service Model & How It Works -->
+    <section id="about" class="py-20 sm:py-28 bg-pine-900 border-b border-pine-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emeraldCustom-300 text-xs font-semibold uppercase tracking-widest block mb-2">Flexible &amp; Accessible</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight">100% Online Service Model</h2>
+                <div class="w-16 h-1 bg-emeraldCustom-400 mx-auto mt-4 mb-6 rounded-full"></div>
+                <p class="text-stone-200 text-sm sm:text-base leading-relaxed">
+                    Designed specifically for tourists, visiting families, and event hosts. Hire Praveen online from any location prior to your trip or event without needing to visit a physical studio.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1: Online Hiring -->
+                <div class="bg-pine-800/90 backdrop-blur-sm rounded-2xl p-8 border border-pine-700 hover:border-emeraldCustom-400/50 transition-all flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 bg-emeraldCustom-500/20 rounded-xl flex items-center justify-center text-emeraldCustom-300 text-xl mb-6 border border-emeraldCustom-400/30">
+                            <i class="fa-solid fa-laptop text-emeraldCustom-300"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-3">Hire From Any Location</h3>
+                        <p class="text-stone-200 text-sm leading-relaxed mb-4">
+                            No physical studio visit required. Hire Praveen online ahead of time or while traveling in Nainital &amp; Uttarakhand.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-emeraldCustom-300 uppercase tracking-wider">Seamless Online Booking</span>
+                </div>
+
+                <!-- Feature 2: Digital Delivery -->
+                <div class="bg-pine-800/90 backdrop-blur-sm rounded-2xl p-8 border border-pine-700 hover:border-emeraldCustom-400/50 transition-all flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 bg-emeraldCustom-500/20 rounded-xl flex items-center justify-center text-emeraldCustom-300 text-xl mb-6 border border-emeraldCustom-400/30">
+                            <i class="fa-solid fa-cloud-arrow-down text-emeraldCustom-300"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-3">Direct Digital Photos</h3>
+                        <p class="text-stone-200 text-sm leading-relaxed mb-4">
+                            High-resolution digital files delivered directly to you online. Print them later on your own whenever and wherever you choose.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-emeraldCustom-300 uppercase tracking-wider">Print Later On Your Own</span>
+                </div>
+
+                <!-- Feature 3: Custom Print Consultation -->
+                <div class="bg-pine-800/90 backdrop-blur-sm rounded-2xl p-8 border border-pine-700 hover:border-emeraldCustom-400/50 transition-all flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 bg-emeraldCustom-500/20 rounded-xl flex items-center justify-center text-emeraldCustom-300 text-xl mb-6 border border-emeraldCustom-400/30">
+                            <i class="fa-solid fa-print text-emeraldCustom-300"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-3">Custom Printing Consult</h3>
+                        <p class="text-stone-200 text-sm leading-relaxed mb-4">
+                            Optionally consult Praveen directly for custom physical photo prints, framed pictures, albums, magazines, or enlargements.
+                        </p>
+                    </div>
+                    <span class="text-xs font-semibold text-emeraldCustom-300 uppercase tracking-wider">Optional Custom Printing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get-Together Events Section -->
+    <section id="events" class="py-20 sm:py-28 bg-pine-950 border-b border-pine-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emeraldCustom-300 text-xs font-semibold uppercase tracking-widest block mb-2">Event Stills</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight">Get-Together Events</h2>
+                <div class="w-16 h-1 bg-emeraldCustom-400 mx-auto mt-4 mb-6 rounded-full"></div>
+                <p class="text-stone-200 text-sm sm:text-base">
+                    Capturing intimate gatherings, birthdays, anniversaries, family staycations, and private celebrations. Receive digital files directly to print later, or consult Praveen for custom printed albums and frames.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Birthdays -->
+                <div class="bg-pine-800/80 rounded-2xl overflow-hidden border border-pine-700 hover:border-emeraldCustom-400/40 transition-all group shadow-xl">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=800" alt="Birthday Party Photography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-pine-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 bg-pine-950/90 border border-emeraldCustom-400/40 text-emeraldCustom-300 px-3 py-1 rounded-full text-xs font-semibold">
+                            Birthdays
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Birthday Celebrations</h3>
+                        <p class="text-stone-200 text-xs sm:text-sm mb-4 leading-relaxed">
+                            Candid event coverage for kids, adults, and family milestone birthday parties held at hotels, resorts, or venues in Nainital.
+                        </p>
+                        <div class="text-xs text-emeraldCustom-300 font-medium border-t border-pine-700 pt-4 flex items-center gap-2">
+                            <i class="fa-solid fa-check"></i> Digital Delivery + Print Option
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anniversaries -->
+                <div class="bg-pine-800/80 rounded-2xl overflow-hidden border border-pine-700 hover:border-emeraldCustom-400/40 transition-all group shadow-xl">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800" alt="Anniversary Event Photography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-pine-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 bg-pine-950/90 border border-emeraldCustom-400/40 text-emeraldCustom-300 px-3 py-1 rounded-full text-xs font-semibold">
+                            Anniversaries
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Anniversary Gatherings</h3>
+                        <p class="text-stone-200 text-xs sm:text-sm mb-4 leading-relaxed">
+                            Documenting special anniversaries, couple dinners, and family staycation events with crisp high-resolution photography.
+                        </p>
+                        <div class="text-xs text-emeraldCustom-300 font-medium border-t border-pine-700 pt-4 flex items-center gap-2">
+                            <i class="fa-solid fa-check"></i> High-Res Digital Stills
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Special Gatherings -->
+                <div class="bg-pine-800/80 rounded-2xl overflow-hidden border border-pine-700 hover:border-emeraldCustom-400/40 transition-all group sm:col-span-2 lg:col-span-1 shadow-xl">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&q=80&w=800" alt="Parties & Gatherings Photography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-pine-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 bg-pine-950/90 border border-emeraldCustom-400/40 text-emeraldCustom-300 px-3 py-1 rounded-full text-xs font-semibold">
+                            Parties &amp; Dinners
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Parties &amp; Reunions</h3>
+                        <p class="text-stone-200 text-xs sm:text-sm mb-4 leading-relaxed">
+                            Private dinner parties, family reunions, and holiday tourist events captured with dedication and professional detail.
+                        </p>
+                        <div class="text-xs text-emeraldCustom-300 font-medium border-t border-pine-700 pt-4 flex items-center gap-2">
+                            <i class="fa-solid fa-check"></i> Fast Digital Delivery
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scenic Photography & Printing Options Section -->
+    <section id="sceneries" class="py-20 sm:py-28 scenic-bg border-b border-pine-700/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emeraldCustom-300 text-xs font-semibold uppercase tracking-widest block mb-2">Himalayan Landscapes</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight">Printing Sceneries</h2>
+                <div class="w-16 h-1 bg-emeraldCustom-400 mx-auto mt-4 mb-6 rounded-full"></div>
+                <p class="text-stone-200 text-sm sm:text-base">
+                    Stunning scenic landscape shots around Nainital and Uttarakhand. Receive digital photos directly to print later on your own, or consult Praveen for custom physical prints and framing.
+                </p>
+            </div>
+
+            <!-- Scenic Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-pine-900/90 rounded-xl overflow-hidden border border-pine-700 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=600" alt="Himalayan Mountain Lake" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+                    <div class="p-4">
+                        <h4 class="font-serif text-lg font-bold text-white">Naini Lake Sceneries</h4>
+                        <p class="text-xs text-stone-300 mt-1">High-definition landscape captures available for direct digital download or print frames.</p>
+                    </div>
+                </div>
+                <div class="bg-pine-900/90 rounded-xl overflow-hidden border border-pine-700 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=600" alt="Snow Mountain Range" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+                    <div class="p-4">
+                        <h4 class="font-serif text-lg font-bold text-white">Mountain Peaks</h4>
+                        <p class="text-xs text-stone-300 mt-1">Crisp Himalayan panorama images suitable for large wall prints and photo albums.</p>
+                    </div>
+                </div>
+                <div class="bg-pine-900/90 rounded-xl overflow-hidden border border-pine-700 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=600" alt="Mist Forest Landscape" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+                    <div class="p-4">
+                        <h4 class="font-serif text-lg font-bold text-white">Pine Forest Trails</h4>
+                        <p class="text-xs text-stone-300 mt-1">Atmospheric nature photography for home decor or personal collection.</p>
+                    </div>
+                </div>
+                <div class="bg-pine-900/90 rounded-xl overflow-hidden border border-pine-700 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=600" alt="Scenic Sunset Valley" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+                    <div class="p-4">
+                        <h4 class="font-serif text-lg font-bold text-white">Golden Valley Sunsets</h4>
+                        <p class="text-xs text-stone-300 mt-1">Custom consultation available for specialized photo magazines and custom sizes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Print Consultation Banner -->
+            <div class="bg-pine-800/90 border border-emeraldCustom-400/40 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-2">Want Physical Prints, Frames, or Magazines?</h3>
+                    <p class="text-stone-200 text-xs sm:text-sm max-w-2xl leading-relaxed">
+                        While all hires include raw/edited digital photos for self-printing, you can also consult Praveen directly to arrange premium photo prints, wooden frames, custom photo albums, or keepsake magazines.
+                    </p>
+                </div>
+                <a href="https://wa.me/919411309153?text=Hello%20Praveen,%20I%20would%20like%20to%20consult%20you%20regarding%20custom%20photo%20prints%20and%20frames." target="_blank" rel="noopener noreferrer" class="whitespace-nowrap px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition-all shadow-md">
+                    <i class="fa-brands fa-whatsapp mr-1.5 text-sm"></i> Consult Printing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Policy Section -->
+    <section id="policy" class="py-20 sm:py-28 bg-pine-900 border-b border-pine-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-emeraldCustom-300 text-xs font-semibold uppercase tracking-widest block mb-2">Transparent Terms</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white tracking-tight">Booking &amp; Business Policies</h2>
+                <div class="w-16 h-1 bg-emeraldCustom-400 mx-auto mt-4 mb-6 rounded-full"></div>
+                <p class="text-stone-200 text-sm sm:text-base">
+                    All hiring and printing terms are clearly outlined upfront to ensure a smooth, secure booking experience.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Payment Receipt -->
+                <div class="bg-pine-800/90 rounded-2xl p-6 border border-pine-700">
+                    <div class="text-emeraldCustom-300 text-2xl mb-4">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Booking Payment</h3>
+                    <p class="text-stone-200 text-xs leading-relaxed">
+                        Full advance receipt/payment requirement is enforced prior to event date confirmation and scheduling.
+                    </p>
+                </div>
+
+                <!-- Refund & Cancellation -->
+                <div class="bg-pine-800/90 rounded-2xl p-6 border border-pine-700">
+                    <div class="text-emeraldCustom-300 text-2xl mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Cancellation Policy</h3>
+                    <ul class="text-stone-200 text-xs space-y-1.5 leading-relaxed">
+                        <li>• <strong class="text-white">30+ Days Prior:</strong> 100% Refund</li>
+                        <li>• <strong class="text-white">7 to 29 Days Prior:</strong> 80% Refund</li>
+                        <li>• <strong class="text-white">&lt; 7 Days Prior:</strong> No Refund (0%)</li>
+                    </ul>
+                </div>
+
+                <!-- Delivery Charges -->
+                <div class="bg-pine-800/90 rounded-2xl p-6 border border-pine-700">
+                    <div class="text-emeraldCustom-300 text-2xl mb-4">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Delivery Fees</h3>
+                    <p class="text-stone-200 text-xs leading-relaxed">
+                        Digital files are delivered free online. Physical photo print/frame deliveries incur charges depending on recipient location.
+                    </p>
+                </div>
+
+                <!-- Quantity & Quality Pricing -->
+                <div class="bg-pine-800/90 rounded-2xl p-6 border border-pine-700">
+                    <div class="text-emeraldCustom-300 text-2xl mb-4">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-2">Flexible Pricing</h3>
+                    <p class="text-stone-200 text-xs leading-relaxed">
+                        Final package rates depend strictly on photo quantity selected, resolution quality options, and event duration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Direct Links Section -->
+    <section id="contact" class="py-20 sm:py-28 bg-pine-950 border-b border-pine-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Contact Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-emeraldCustom-300 text-xs font-semibold uppercase tracking-widest block mb-2">Get In Touch</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Photographer Praveen Singh Bisht</h2>
+                        <p class="text-stone-200 text-sm mt-3 leading-relaxed">
+                            Serving tourists and local clients in Mallital, Nainital, and surrounding areas in Uttarakhand. Hire online for get-together events or scenery photo orders.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-4 p-4 bg-pine-850 rounded-xl border border-pine-700">
+                            <div class="p-3 bg-emeraldCustom-500/20 text-emeraldCustom-300 rounded-lg text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-xs uppercase tracking-wider">Address</h4>
+                                <p class="text-stone-200 text-xs mt-1">136, Ward No-9, Mallital, Nainital, Uttarakhand 263001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-pine-850 rounded-xl border border-pine-700">
+                            <div class="p-3 bg-emeraldCustom-500/20 text-emeraldCustom-300 rounded-lg text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-xs uppercase tracking-wider">Phone Number</h4>
+                                <a href="tel:+919411309153" class="text-emeraldCustom-300 font-semibold hover:underline text-xs mt-1 block">094113 09153</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-pine-850 rounded-xl border border-pine-700">
+                            <div class="p-3 bg-emeraldCustom-500/20 text-emeraldCustom-300 rounded-lg text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-xs uppercase tracking-wider">Email Address</h4>
+                                <a href="mailto:psbishtntl0@gmail.com" class="text-emeraldCustom-300 font-semibold hover:underline text-xs mt-1 block">psbishtntl0@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platform Search & Maps Links -->
+                    <div class="bg-pine-850 p-6 rounded-2xl border border-pine-700 space-y-3">
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">Location &amp; Profile Links</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            <a href="https://maps.app.goo.gl/GtCsUzVaXRoio7ud8?g_st=ic" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-pine-800 hover:bg-pine-750 text-stone-200 rounded-lg border border-pine-700 flex items-center gap-2 transition-all">
+                                <i class="fa-solid fa-store text-emeraldCustom-400"></i> Google Business Link
+                            </a>
+                            <a href="https://maps.google.com/maps?cid=764996179769750051" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-pine-800 hover:bg-pine-750 text-stone-200 rounded-lg border border-pine-700 flex items-center gap-2 transition-all">
+                                <i class="fa-solid fa-map-location-dot text-emeraldCustom-400"></i> Google Maps
+                            </a>
+                            <a href="https://maps.apple.com/?q=Photographer+Praveen+Singh+Bisht+Nainital" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-pine-800 hover:bg-pine-750 text-stone-200 rounded-lg border border-pine-700 flex items-center gap-2 transition-all">
+                                <i class="fa-brands fa-apple text-emeraldCustom-400"></i> Apple Maps Search
+                            </a>
+                            <a href="https://www.instagram.com/explore/search/keyword/?q=Photographer%20Praveen%20Singh%20Bisht" target="_blank" rel="noopener noreferrer" class="p-2.5 bg-pine-800 hover:bg-pine-750 text-stone-200 rounded-lg border border-pine-700 flex items-center gap-2 transition-all">
+                                <i class="fa-brands fa-instagram text-emeraldCustom-400"></i> Instagram Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Quick Inquiry Form -->
+                <div class="lg:col-span-7 bg-pine-800/90 p-8 rounded-2xl border border-pine-700 shadow-2xl">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-2">Send an Instant Booking Inquiry</h3>
+                    <p class="text-stone-300 text-xs mb-6">Fill in your event details below to launch a pre-formatted WhatsApp message directly to Praveen.</p>
+                    
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label for="client-name" class="block text-xs font-semibold text-stone-200 uppercase mb-1">Your Full Name</label>
+                            <input type="text" id="client-name" required placeholder="e.g. Rahul Sharma" class="w-full bg-pine-900 border border-pine-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emeraldCustom-400 placeholder-stone-500" />
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="event-type" class="block text-xs font-semibold text-stone-200 uppercase mb-1">Service Required</label>
+                                <select id="event-type" class="w-full bg-pine-900 border border-pine-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emeraldCustom-400">
+                                    <option value="Birthday Party">Birthday Celebration</option>
+                                    <option value="Anniversary Party">Anniversary Gathering</option>
+                                    <option value="Get-Together Dinner">Private Get-Together / Dinner</option>
+                                    <option value="Scenic Photography Print">Scenic Photo Prints / Frames</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="event-date" class="block text-xs font-semibold text-stone-200 uppercase mb-1">Event / Shooting Date</label>
+                                <input type="date" id="event-date" required class="w-full bg-pine-900 border border-pine-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emeraldCustom-400" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="client-message" class="block text-xs font-semibold text-stone-200 uppercase mb-1">Location &amp; Additional Details</label>
+                            <textarea id="client-message" rows="4" placeholder="Mention venue location in Nainital, estimated hours, print preferences..." class="w-full bg-pine-900 border border-pine-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-emeraldCustom-400 placeholder-stone-500"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-lg text-xs tracking-widest uppercase transition-all shadow-lg hover:shadow-emerald-500/30 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Send Booking Inquiry via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pine-950 py-10 border-t border-pine-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="font-serif text-lg font-bold text-white uppercase tracking-wider">Photographer Praveen Singh Bisht</p>
+            <p class="text-xs text-stone-400">136, Ward No-9, Mallital, Nainital, Uttarakhand 263001 | Phone: <a href="tel:+919411309153" class="text-emeraldCustom-300">094113 09153</a> | Email: <a href="mailto:psbishtntl0@gmail.com" class="text-emeraldCustom-300">psbishtntl0@gmail.com</a></p>
+            <p class="text-[11px] text-stone-500 pt-2">&copy; Photographer Praveen Singh Bisht. Online Photography &amp; Scenic Printing Services.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & WhatsApp Form Submission -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('client-name').value;
+            const service = document.getElementById('event-type').value;
+            const date = document.getElementById('event-date').value;
+            const message = document.getElementById('client-message').value;
+
+            const whatsappText = `Hello Praveen,%0A%0AMy name is ${encodeURIComponent(name)}.%0AI would like to inquire about booking your photography service.%0A%0A• Service: ${encodeURIComponent(service)}%0A• Date: ${encodeURIComponent(date)}%0A• Details: ${encodeURIComponent(message)}`;
+            
+            window.open(`https://wa.me/919411309153?text=${whatsappText}`, '_blank');
+        }
+    </script>
+</body>
+</html>
